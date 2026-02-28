@@ -1,0 +1,98 @@
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            /* IMAGEN DE FONDO: Café artesanal */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('fondo_cafeteria.png') no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Botón Principal: El Menú */
+        .btn-primary {
+            background-color: #d4a373; /* Tono café con leche/marrón cálido */
+            color: #1a1a1a;
+            padding: 16px 32px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        /* Botón Secundario: Ubicación Maps */
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            border: 2px solid white;
+            transition: 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary:hover { background-color: #bc8a5f; transform: translateY(-3px); }
+        .btn-secondary:hover { background-color: white; color: #1a1a1a; }
+
+        /* Icono de WhatsApp Flotante */
+    .logo-wsp {
+            position: fixed;
+            width: 150px;
+            height: auto;
+            bottom: 40px;
+            right: 150px;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        @media (max-width: 600px) {
+            .cta-container { flex-direction: column; width: 100%; align-items: center; }
+            .btn-primary, .btn-secondary { width: 100%; max-width: 300px; }
+             .logo-wsp {
+                width: 50px;
+                height: auto;
+                margin-bottom: 100px;
+                margin-right: -100px;
+                margin-top: 300px;
+            }
+        
+        }
